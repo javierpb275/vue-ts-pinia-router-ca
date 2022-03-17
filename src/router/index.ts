@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import HomeView from '../views/HomeView.vue';
 import CounterView from '../views/CounterView.vue';
+import CartView from '../views/CartView.vue';
 
 const routes: RouteRecordRaw[] = [
     {
@@ -12,6 +13,11 @@ const routes: RouteRecordRaw[] = [
         path: '/counter',
         name: 'Counter',
         component: CounterView
+    },
+    {
+        path: '/cart',
+        name: 'Cart',
+        component: CartView
     }
 ];
 
