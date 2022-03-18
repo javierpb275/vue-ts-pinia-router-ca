@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue';
 import CounterView from '../views/CounterView.vue';
 import CartView from '../views/CartView.vue';
 import CatsView from '../views/CatsView.vue';
+import { facts } from '../assets/facts';
 
 const routes: RouteRecordRaw[] = [
     {
@@ -25,13 +26,29 @@ const routes: RouteRecordRaw[] = [
         name: 'Cats',
         component: CatsView
     }, 
-    /*
     {
         path: '/cats/fact/:id',
         name: 'Fact',
         component: () => import('../views/Fact.vue'),
-        beforeEnter: (to, _, next) => {}
+        beforeEnter: (to, _, next) => {
+            const { id } = to.params
+
+            if (Array.isArray(id)) {
+              next({ path: '/error' })
+              return
+            }
+      
+            // Is a valid index number
+            const index = parseInt(id)
+            if (index < 0 || index >= facts.length) {
+              next({ path: '/error' })
+              return
+            }
+      
+            next()
+        }
     },
+    /*
     {
         path: '/cats/facts/',
         name: 'FactList',
@@ -41,7 +58,8 @@ const routes: RouteRecordRaw[] = [
         path: '/:catchAll(.*)',
         name: 'PageNotFound',
         component: () => import('../views/PageNotFound.vue')
-    }*/
+    }
+    */
 ];
 
 const router = createRouter({
