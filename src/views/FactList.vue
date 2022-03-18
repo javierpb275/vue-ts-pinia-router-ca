@@ -1,10 +1,10 @@
-<script lang="ts">
+<script lang="ts" setup>
 import { facts } from '../assets/facts'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
 const goToFact = (id: number) => {
-    router.push({ path: `cats/fact/${id}` })
+    router.push({ path: `fact/${id}` })
 }
 </script>
 
