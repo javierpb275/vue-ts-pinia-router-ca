@@ -48,12 +48,12 @@ const routes: RouteRecordRaw[] = [
             next()
         }
     },
-    /*
     {
-        path: '/cats/facts/',
+        path: '/cats/facts',
         name: 'FactList',
         component: () => import('../views/FactList.vue'),
     },
+    /*
     {
         path: '/:catchAll(.*)',
         name: 'PageNotFound',
