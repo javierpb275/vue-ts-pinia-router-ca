@@ -5,6 +5,8 @@
   <router-link to="/counter">Counter</router-link>
     {{' '}}
   <router-link to="/cart">Cart</router-link>
+    {{' '}}
+  <router-link to="/cats">Cats</router-link>
   <router-view></router-view>
 </template>
 
