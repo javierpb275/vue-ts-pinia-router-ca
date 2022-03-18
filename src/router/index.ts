@@ -53,13 +53,11 @@ const routes: RouteRecordRaw[] = [
         name: 'FactList',
         component: () => import('../views/FactList.vue'),
     },
-    /*
     {
         path: '/:catchAll(.*)',
         name: 'PageNotFound',
         component: () => import('../views/PageNotFound.vue')
     }
-    */
 ];
 
 const router = createRouter({
